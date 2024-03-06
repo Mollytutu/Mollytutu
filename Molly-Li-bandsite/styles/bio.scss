@@ -1,0 +1,113 @@
+@import "partials/variable";
+
+@font-face{
+    font-family:"Avenir Next";
+    src:url(../assets/Font/AvenirNextLTPro-Regular.otf)format(openType);
+    font-weight:normal;
+}
+
+@font-face{
+    font-family:"Avenir Next";
+    src:url(../assets/Font/AvenirNextLTPro-Demi.otf)format(openType);
+    font-weight: bold;
+}
+
+@font-face{
+    font-family:"Avenir Next";
+    src:url(../assets/Font/AvenirNextLTPro-Bold.otf)format(openType);
+    font-weight: bolder;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: "Avenir Next", sans-serif;
+    margin:0;
+    padding:0;
+    min-width: 20rem;
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+    margin:0;
+}
+
+h1{
+    padding:1rem;
+    font-weight: bolder;
+    font-size:1rem ;
+}
+
+h2{
+    padding:1rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    width: 100vw;
+}
+
+.background-black{
+    background-color:$prim-black;
+    color: white;
+}
+
+
+.nav{
+    &__header{
+    display: flex;
+    align-self:center;
+    margin:1rem auto;
+    }
+    
+
+    &__logo{
+        height: 1.5rem;
+        padding:3rem auto 2rem auto;
+    }
+
+    &__link{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 50vw;
+    }
+}
+
+.hero{
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width:100vh;
+    
+    &__title{
+        position: absolute;
+        top:45%;
+        padding-left: 1.5rem;
+
+    }
+
+}
+
+@media(min-width:$breakpoint-tablet){
+
+}
+
+@media(min-width:$breakpoint-desktop){
+
+}
