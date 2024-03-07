@@ -3,19 +3,19 @@
 @font-face{
     font-family:"Avenir Next";
     src:url(../assets/Font/AvenirNextLTPro-Regular.otf)format(openType);
-    font-weight:normal;
+    font-weight:400;
 }
 
 @font-face{
     font-family:"Avenir Next";
     src:url(../assets/Font/AvenirNextLTPro-Demi.otf)format(openType);
-    font-weight: bold;
+    font-weight:600;
 }
 
 @font-face{
     font-family:"Avenir Next";
     src:url(../assets/Font/AvenirNextLTPro-Bold.otf)format(openType);
-    font-weight: bolder;
+    font-weight:700;
 }
 
 body{
@@ -33,17 +33,24 @@ div{
 }
 
 h1{
-    padding:1rem;
-    font-weight: bolder;
-    font-size:1rem ;
+    font-weight: 700;
+    font-size:2rem ;
 }
 
 h2{
-    padding:1rem;
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight:600;
+    font-size: 1.5rem;
 }
 
+h3{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+p{
+    font-size:1.2rem;
+    line-height: 1.6rem;
+}
 
 a{
     text-decoration: none;
@@ -54,8 +61,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-top: 1.5rem;
     width: 100vw;
 }
 
@@ -69,39 +75,100 @@ nav{
     &__header{
     display: flex;
     align-self:center;
-    margin:1rem auto;
     }
-    
 
     &__logo{
-        height: 1.5rem;
+        height: 2rem;
         padding:3rem auto 2rem auto;
     }
 
     &__link{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-evenly;
-        width: 50vw;
+    }
+
+    &__bar{
+        text-decoration: underline .25rem;
+        text-underline-offset:2rem;
+        
+    }
+    &__bar2{
+        color: #E1E1E1;
+        font-weight:400;
     }
 }
 
 .hero{
-    background-image: url(../assets/Images/hero-bio.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    height: 100vh;
-    width:100vh;
-    
-    &__title{
-        position: absolute;
-        top:45%;
-        padding-left: 1.5rem;
+    background-color:#323232;
+    z-index: 2;
 
+    &__img{
+        width:100vw;
+        max-width:100%;
+        height: 20rem;
+        background-image: url(../assets/Images/hero-bio.jpg);
+        opacity:0.5;
+        background-size: cover; width:100vw;
+        max-width:100%;
+        height: 20rem;
+        background-image: url(../assets/Images/hero-bio.jpg);
+        background-position: center;
+        background-size: cover;
     }
 
+    &__text{
+        display: flex;
+        align-self: center;
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+article{
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+article h1{
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+article img{
+   width:100vw;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+.article__subheader{
+    line-height: 3rem;
+}
+
+.Gallery{
+    background-color: $sec-silver;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    &__title{
+        padding: 1rem;
+    }
+
+    &__picture{
+        padding: 1rem;
+    }
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media(min-width:$breakpoint-tablet){
