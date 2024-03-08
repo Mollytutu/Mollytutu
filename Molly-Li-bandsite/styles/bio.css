@@ -78,9 +78,7 @@ nav {
   justify-content: space-evenly;
 }
 .nav__bar {
-  -webkit-text-decoration: underline 0.25rem;
-          text-decoration: underline 0.25rem;
-  text-underline-offset: 2rem;
+  border-bottom: white;
 }
 .nav__bar2 {
   color: #E1E1E1;
