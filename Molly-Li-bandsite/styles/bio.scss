@@ -1,21 +1,7 @@
-@use "partials/variable";
-@use "partials/typography";
-@use "partials/mixin";
-
-body{
-    box-sizing: border-box;
-    font-family: "Avenir Next", sans-serif;
-    margin:0;
-    padding:0;
-    min-width: 20rem;
-    list-style-type: none;
-}
-
-div{
-    display: flex;
-    justify-content: space-evenly;
-    margin:0;
-}
+@use './partials/variable';
+@use './partials/typography';
+@use './partials/mixin';
+@use './partials/global';
 
 h1{
     font-weight: 700;
@@ -37,11 +23,6 @@ p{
     line-height: 1.6rem;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
 nav{
     display: flex;
     flex-direction: column;
@@ -58,12 +39,14 @@ nav{
 .nav{
     &__header{
     display: flex;
-    align-self:center;
+    align-items: center;
     }
 
     &__logo{
-        height: 2rem;
+        height: 1.25rem;
+        width: 100vw;
         padding:3rem auto 2rem auto;
+        
     }
 
     &__link{

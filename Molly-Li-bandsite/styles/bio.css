@@ -1,17 +1,18 @@
-body {
-  box-sizing: border-box;
-  font-family: "Avenir Next", sans-serif;
-  margin: 0;
-  padding: 0;
-  min-width: 20rem;
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format(openType);
+  font-weight: 400;
 }
-
-div {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0;
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format(openType);
+  font-weight: 600;
 }
-
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format(openType);
+  font-weight: 700;
+}
 h1 {
   font-weight: 700;
   font-size: 2rem;
@@ -52,15 +53,20 @@ nav {
 
 .nav__header {
   display: flex;
-  align-self: center;
+  align-items: center;
 }
 .nav__logo {
-  height: 2rem;
+  height: 1.25rem;
+  width: 100vw;
   padding: 3rem auto 2rem auto;
 }
 .nav__link {
   display: flex;
   justify-content: space-evenly;
+}
+.nav__list {
+  padding-left: none;
+  list-style-type: none;
 }
 .nav__bar {
   border-bottom: white;
