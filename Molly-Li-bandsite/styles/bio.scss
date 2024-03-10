@@ -1,22 +1,6 @@
-@import "partials/variable";
-
-@font-face{
-    font-family:"Avenir Next";
-    src:url(../assets/Font/AvenirNextLTPro-Regular.otf)format(openType);
-    font-weight:400;
-}
-
-@font-face{
-    font-family:"Avenir Next";
-    src:url(../assets/Font/AvenirNextLTPro-Demi.otf)format(openType);
-    font-weight:600;
-}
-
-@font-face{
-    font-family:"Avenir Next";
-    src:url(../assets/Font/AvenirNextLTPro-Bold.otf)format(openType);
-    font-weight:700;
-}
+@use "partials/variable";
+@use "partials/typography";
+@use "partials/mixin";
 
 body{
     box-sizing: border-box;
@@ -24,6 +8,7 @@ body{
     margin:0;
     padding:0;
     min-width: 20rem;
+    list-style-type: none;
 }
 
 div{
@@ -70,7 +55,6 @@ nav{
     color: white;
 }
 
-
 .nav{
     &__header{
     display: flex;
@@ -85,6 +69,11 @@ nav{
     &__link{
         display: flex;
         justify-content: space-evenly;
+    }
+
+    &__list{
+        padding-left: none;
+        list-style-type:none;
     }
 
     &__bar{
