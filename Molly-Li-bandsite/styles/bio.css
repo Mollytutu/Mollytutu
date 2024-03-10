@@ -21,7 +21,7 @@ body {
   max-width: 120rem;
 }
 
-logo {
+.logo {
   max-height: 1.25rem;
   max-width: 7.5rem;
 }
@@ -44,13 +44,32 @@ ul {
 
 li {
   text-align: center;
-  width: 50vw;
 }
 
-h1, h2 {
+h1 {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }
 
 h3 {
@@ -58,51 +77,87 @@ h3 {
   font-weight: 600;
   line-height: 1.375rem;
 }
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 
 p {
   font-size: 0.812rem;
   font-weight: 400;
   line-height: 1.125rem;
 }
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
 
 nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 1.5rem;
   width: 100vw;
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    display: inline-block;
+    justify-content: flex-start;
+  }
 }
 
 .background-black {
   background-color: #323232;
   color: white;
-  width: 100vw;
 }
 
-.nav__header {
-  display: flex;
-  align-items: center;
+@media only screen and (min-width: 768px) {
+  .nav__container {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 .nav__logo {
   height: 1.25rem;
-  width: 100vw;
   margin: 1rem auto 0 auto;
-}
-.nav__link {
-  padding: 0;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .nav__logo {
+    width: auto;
+    margin: 1.5rem 2.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav__img {
+    margin-left: 5vw;
+  }
 }
 .nav__list {
   padding-left: none;
   display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  .nav__list {
+    justify-content: flex-start;
+  }
 }
 .nav__bar {
-  border-bottom: white;
-  margin: 0;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  text-align: center;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .nav__bar {
+    padding-top: 1rem;
+  }
 }
 .nav__bar1 {
   font-weight: 600;
@@ -110,17 +165,39 @@ nav {
   width: 50vw;
   padding-left: 0;
 }
+@media only screen and (min-width: 768px) {
+  .nav__bar1 {
+    border-bottom: none;
+    -webkit-text-decoration: underline 3px white;
+            text-decoration: underline 3px white;
+    text-underline-offset: 1.5rem;
+    align-self: center;
+    width: 10rem;
+  }
+}
 .nav__bar2 {
   color: #E1E1E1;
   font-weight: 400;
+  width: 50vw;
+  margin: auto;
+}
+@media only screen and (min-width: 768px) {
+  .nav__bar2 {
+    width: 6rem;
+  }
 }
 .nav__item {
   width: 50vw;
 }
+@media only screen and (min-width: 768px) {
+  .nav__item {
+    width: auto;
+  }
+}
 
 .hero {
   width: 100vw;
-  height: 12rem;
+  height: 59vw;
   background-image: url(../assets/Images/hero-bio.jpg);
   background-repeat: none;
   background-size: cover;
@@ -131,8 +208,8 @@ nav {
   background-color: #323232;
   opacity: 0.5;
   position: absolute;
+  width: 100%;
   height: 100%;
-  width: 100vw;
   z-index: 1;
 }
 .hero__container {
@@ -143,13 +220,29 @@ nav {
   align-content: center;
   color: white;
   z-index: 1;
-  margin: 25% 0 auto 1.5rem;
+  margin: 26vw 0 auto 1.5rem;
   font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .hero__text {
+    margin-left: 3rem;
+  }
 }
 
 .article {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .article {
+    padding: 0 6rem;
+  }
+}
+@media only sreen and (min-width: 1280px) {
+  .article {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
 }
 .article__header {
   margin: 0;
@@ -157,17 +250,59 @@ nav {
   padding-bottom: 1rem;
   font-weight: 600;
 }
-.article__Image {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  width: 80vw;
+@media only screen and (min-width: 768px) {
+  .article__header {
+    padding-bottom: 2rem;
+    font-size: 2.3rem;
+    margin-left: -2vw;
+  }
 }
-.article__subheader {
-  font-weight: 400;
+@media only sreen and (min-width: 1280px) {
+  .article__header {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+.article__image {
+  background-image: url(../assets/Images/band.jpg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  width: 85vw;
+  height: 37vw;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (min-width: 768px) {
+  .article__image {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .article__quote {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .article__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .article__text {
+    width: 35vw;
+    margin-top: 0;
+    padding-bottom: 2rem;
+  }
 }
 
-.Gallery {
+.gallery {
   background-color: #E1E1E1;
   display: flex;
   flex-direction: column;
@@ -175,14 +310,43 @@ nav {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.Gallery__title {
+@media only screen and (min-width: 768px) {
+  .gallery {
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: space-around;
+  }
+}
+.gallery__title {
   font-weight: 600;
   margin: 0;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
-.Gallery__picture {
+@media only screen and (min-width: 768px) {
+  .gallery__title {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.gallery__picture {
   padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .gallery__picture {
+    padding: 1rem;
+    width: 28vw;
+    height: 18vw;
+    flex-wrap: wrap;
+  }
 }
 
 .footer {

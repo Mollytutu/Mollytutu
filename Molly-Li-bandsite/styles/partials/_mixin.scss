@@ -6,7 +6,7 @@
             @content;}
         }
         @else if $media== desktop {
-            @media only sreen and(min-width:$breakpoint-desktop){
+            @media only sreen and (min-width:$breakpoint-desktop){
                 @content;}
         }
     }

@@ -2,7 +2,7 @@
 @import "./partials/variable";
 @import "./partials/mixin";
 
-h1{
+h1 {
     font-weight: 700;
     font-size:1.5rem;
     line-height: 2rem;
@@ -13,184 +13,294 @@ h1{
     }
 }
 
-h2{
+h2 {
     font-weight: 700;
     font-size:1.5rem;
     line-height: 2rem;
     @include breakpoint(tablet){
-        font-weight: 700;
-        font-size:2rem;
+        font-weight: 600;
+        font-size:2.25rem;
         line-height: 2.75rem;
     }
 }
 
-
-
-h3{
+h3 {
     font-size: 0.875rem;
     font-weight:600;
     line-height: 1.375rem;
+    @include breakpoint(tablet){
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2rem;   
+    }
 }
 
-
-p{
+p {
     font-size: 0.812rem;
     font-weight: 400;
     line-height: 1.125rem;
+    @include breakpoint(tablet){
+        font-size:0.875rem;
+        line-height: 1.375rem;
+    }
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 1.5rem;
     width: 100vw;
+    @include breakpoint(tablet){
+        display: inline-block;
+        justify-content: flex-start;
+    }
 }
 
-.background-black{
+.background-black {
     background-color:$prim-black;
     color: white;
-    width: 100vw;
 }
 
-.nav{
-    &__header{
-    display: flex;
-    align-items: center;
-    }
-
-    &__logo{
-        height: 1.25rem;
-        width: 100vw;
-        margin: 1rem auto 0 auto;
-    }
-
-    &__link{
-        padding: 0;
+.nav {
+    &__container {
+        @include breakpoint(tablet){
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        }
     }
 
-    &__list{
+    &__logo {
+        height: 1.25rem;
+        margin: 1rem auto 0 auto;
+        width: 100vw;
+        display: flex;
+        justify-content:center;
+        @include breakpoint(tablet){
+            width:auto;
+            margin: 1.5rem 2.5rem;
+        }
+    }
+
+    &__img {
+       @include breakpoint(tablet){
+        margin-left:5vw;
+       }
+    }
+
+    &__list {
         padding-left: none;
         display:flex;
-
+        justify-content: space-between;
+        @include breakpoint(tablet){
+            justify-content: flex-start;
+        }
     }
-    &__bar{
-        border-bottom: white;
-        margin:0;
+
+    &__bar {
         padding-top: 0.5rem;
         padding-bottom:.5rem;
-        text-align: center;
+        margin:0;
+        @include breakpoint(tablet){
+            padding-top:1rem;
+        }
     }
     
-    &__bar1{
+    &__bar1 {
         font-weight: 600;
         border-bottom:0.2rem solid white ;
         width: 50vw;
         padding-left: 0;
+        @include breakpoint(tablet){
+            border-bottom: none;
+            text-decoration: underline 3px white;
+            text-underline-offset: 1.5rem;
+            align-self: center;
+            width: 10rem;
+        }
     }
         
-    &__bar2{
+    &__bar2 {
         color: #E1E1E1;
         font-weight: 400;
-        
-    }
-    &__item{
         width:50vw;
+       margin: auto;
+       @include breakpoint(tablet){
+        width:6rem;
+       }
+    }
+
+    &__item {
+        width:50vw;
+        @include breakpoint(tablet){
+            width:auto;
+        }
     }
 }
 
-.hero{
+.hero {
     width:100vw;
-    height:100vh;
+    height:59vw;
     background-image: url(../assets/Images/hero-bio.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
     position: relative;
 
-    &__darker{
+    &__darker {
         background-color:#323232;
         opacity:0.5;
         position: absolute;
-        height: 100vh;
-        width:100vw;
+        width:100%;
+        height:100%;
         z-index: 1;
     }
     
-    &__container{
+    &__container {
         display: flex;
         align-items: center;
     }
 
-    &__text{
+    &__text {
         align-content: center;
         color: white;
         z-index: 1;
-        margin:25% 0 auto $space-above;
+        margin:26vw 0 auto $space-above;
         font-weight: 600;
+        @include breakpoint(tablet){
+            margin-left: $space-above-tablet;
+        }
     }
 }
 
-.article{
+.article {
     padding-left:$space-between;
     padding-right:$space-between;
 
+    @include breakpoint(tablet){
+        padding: 0 6rem;}
+    
+    @include breakpoint(desktop){
+            margin-left:10rem;
+            margin-right:10rem;
+        }
 
-    &__header{
+    
+    &__header {
     margin:0;
     padding-top:$space-above;
     padding-bottom:$space-under;
     font-weight: 600;
+    @include breakpoint(tablet){
+        padding-bottom: $space-between-tablet;
+        font-size: 2.3rem;
+        margin-left: -2vw;
+        }
+    
+    @include breakpoint(desktop){
+        padding-left:10rem;
+        padding-right:10rem;
+        }
     }
 
-    &__Image{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        width: 80vw;
+    &__image {
+        background-image: url(../assets/Images/band.jpg);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        width: 85vw;
+        height: 37vw;
+        margin-bottom: 1rem;
+        position: relative;
+        margin-right:auto;
+        margin-left:auto;
+    @include breakpoint(tablet){
+        padding-bottom: $space-under-tablet;
+        margin-bottom: 2rem;
+        margin-right:auto;
+        margin-left:auto;
+        }   
     }
 
-    &__subheader{
-        font-weight: 400
+    &__quote {
+        @include breakpoint(tablet){
+            font-size: 1.1rem;
+        }
+    }
+
+    &__wrapper {
+        @include breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+        }
+    }
+
+    &__text {
+        @include breakpoint(tablet){
+            width:35vw;
+            margin-top: 0;
+            padding-bottom: $space-under-tablet;
+        }
     }
 }
 
-.Gallery{
+.gallery {
     background-color: $sec-silver;
     display: flex;
     flex-direction: column;
     align-content: center;
     padding-left:$space-between;
     padding-right:$space-between;
-
-    &__title{
+        @include breakpoint(tablet){
+            display: flex;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            justify-content: space-around;
+        }
+        
+    &__title {
         font-weight: 600;
         margin:0;
         padding-top: $space-above;
         padding-bottom: $space-under;
+        @include breakpoint(tablet){
+            padding-top: $space-above-tablet;
+            padding-bottom: $space-under-tablet;
+            padding-left: 1rem;
+        }
     }
 
-    &__picture{
+    &__wrapper {
+        @include breakpoint(tablet){   
+        display: flex;
+        flex-wrap: wrap;
+        }
+    }
+
+    &__picture {
         padding-bottom: $space-between;
+        @include breakpoint(tablet){
+            padding:1rem;
+            width:28vw;
+            height: 18vw;
+            flex-wrap: wrap;
+        }
     }
 }
 
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
 
-    &__icon{
+    &__icon {
         padding-right: $space-between;
     }
 
-    &__container{
+    &__container {
         display: flex;
         flex-direction: column;
     }
 
-    &__logo{
+    &__logo {
         padding-top: $space-above;
-    }   
+    }
 }
