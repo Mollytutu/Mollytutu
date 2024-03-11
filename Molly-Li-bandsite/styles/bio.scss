@@ -1,113 +1,384 @@
-@import "partials/variable";
+@import "./partials/global";
+@import "./partials/variable";
+@import "./partials/mixin";
 
-@font-face{
-    font-family:"Avenir Next";
-    src:url(../assets/Font/AvenirNextLTPro-Regular.otf)format(openType);
-    font-weight:normal;
+h1 {
+    font-weight: 700;
+    font-size:1.5rem;
+    line-height: 2rem;
+    @include breakpoint(tablet){
+        font-size:3.75rem;
+        font-weight: 700;
+        line-height: 4.25rem;
+    }
 }
 
-@font-face{
-    font-family:"Avenir Next";
-    src:url(../assets/Font/AvenirNextLTPro-Demi.otf)format(openType);
-    font-weight: bold;
+h2 {
+    font-weight: 700;
+    font-size:1.5rem;
+    line-height: 2rem;
+    @include breakpoint(tablet){
+        font-weight: 600;
+        font-size:2.25rem;
+        line-height: 2.75rem;
+    }
 }
 
-@font-face{
-    font-family:"Avenir Next";
-    src:url(../assets/Font/AvenirNextLTPro-Bold.otf)format(openType);
-    font-weight: bolder;
+h3 {
+    font-size: 0.875rem;
+    font-weight:600;
+    line-height: 1.375rem;
+    @include breakpoint(tablet){
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2rem;   
+    }
 }
 
-body{
-    box-sizing: border-box;
-    font-family: "Avenir Next", sans-serif;
-    margin:0;
-    padding:0;
-    min-width: 20rem;
-}
-
-div{
-    display: flex;
-    justify-content: space-evenly;
-    margin:0;
-}
-
-h1{
-    padding:1rem;
-    font-weight: bolder;
-    font-size:1rem ;
-}
-
-h2{
-    padding:1rem;
-    font-weight: bold;
-    font-size: 1rem;
+h4 {
+    font-size: 0.812rem;
+    font-weight:400;
+    line-height: 1.125rem;
+    @include breakpoint(tablet){
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.375rem; 
+    }
 }
 
 
-a{
-    text-decoration: none;
-    color: white;
+p {
+    font-size: 0.812rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    @include breakpoint(tablet){
+        font-size:0.875rem;
+        line-height: 1.375rem;
+    }
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
     width: 100vw;
+    @include breakpoint(tablet){
+        display: inline-block;
+        justify-content: flex-start;
+    }
 }
 
-.background-black{
+.background-black {
     background-color:$prim-black;
     color: white;
 }
 
-
-.nav{
-    &__header{
-    display: flex;
-    align-self:center;
-    margin:1rem auto;
-    }
-    
-
-    &__logo{
-        height: 1.5rem;
-        padding:3rem auto 2rem auto;
-    }
-
-    &__link{
+.nav {
+    &__container {
+        @include breakpoint(tablet){
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 50vw;
+        justify-content: flex-start;
+        }
     }
-}
 
-.hero{
-    background-image: url(../assets/Images/hero-bio.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    height: 100vh;
-    width:100vh;
+    &__logo {
+        height: 1.25rem;
+        margin: 1rem auto 0 auto;
+        width: 100vw;
+        display: flex;
+        justify-content:center;
+        @include breakpoint(tablet){
+            width:auto;
+            margin: 1.5rem 2.5rem;
+        }
+    }
+
+    &__img {
+       @include breakpoint(tablet){
+        margin-left:5vw;
+       }
+    }
+
+    &__list {
+        padding-left: none;
+        display:flex;
+        justify-content: space-between;
+        @include breakpoint(tablet){
+            justify-content: flex-start;
+        }
+    }
+
+    &__bar {
+        padding-top: 0.5rem;
+        padding-bottom:.5rem;
+        margin:0;
+        @include breakpoint(tablet){
+            padding-top:1rem;
+            font-size: 0.875rem;
+        }
+    }
     
-    &__title{
-        position: absolute;
-        top:45%;
-        padding-left: 1.5rem;
-
+    &__bar1 {
+        font-weight: 600;
+        border-bottom:0.2rem solid white ;
+        width: 50vw;
+        padding-left: 0;
+        @include breakpoint(tablet){
+            border-bottom: none;
+            text-decoration: underline 3px white;
+            text-underline-offset: 1.7rem;
+            align-self: center;
+            width: 10rem;
+        }
+    }
+        
+    &__bar2 {
+        color: #E1E1E1;
+        font-weight: 400;
+        width:50vw;
+       margin: auto;
+       @include breakpoint(tablet){
+        width:6rem;
+       }
     }
 
+    &__item {
+        width:50vw;
+        @include breakpoint(tablet){
+            width:auto;
+        }
+    }
 }
 
-@media(min-width:$breakpoint-tablet){
+.hero {
+    width:100vw;
+    height:59vw;
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 
+    &__darker {
+        background-color:#323232;
+        opacity:0.5;
+        position: absolute;
+        width:100%;
+        height:100%;
+        z-index: 1;
+    }
+    
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        align-content: center;
+        color: white;
+        z-index: 1;
+        margin:26vw 0 auto $space-above;
+        font-weight: 600;
+        @include breakpoint(tablet){
+            margin-left: $space-above-tablet;
+        }
+    }
 }
 
-@media(min-width:$breakpoint-desktop){
+.article {
+    padding-left:$space-between;
+    padding-right:$space-between;
 
+    @include breakpoint(tablet){
+        padding: 0 6rem;
+    }
+    
+    @include breakpoint(desktop){
+            padding-left:12rem;
+            padding-right:20rem;
+        }
+
+    
+    &__header {
+    margin:0;
+    padding-top:$space-above;
+    padding-bottom:$space-under;
+    font-weight: 600;
+    @include breakpoint(tablet){
+        padding-bottom: $space-between-tablet;
+        font-size: 2.3rem;
+        margin-left: -2vw;
+        }
+    
+    @include breakpoint(desktop){
+        padding-left:10rem;
+        padding-right:10rem;
+        }
+    }
+
+    &__image {
+        background-image: url(../assets/Images/band.jpg);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        width: 74vw;
+        height: 37vw;
+        margin-bottom: 1rem;
+        position: relative;
+        margin-right:auto;
+        margin-left:auto;
+    @include breakpoint(tablet){
+        padding-bottom: $space-under-tablet;
+        margin-bottom: 2rem;
+        margin-right:auto;
+        margin-left:auto;
+        }   
+    }
+
+    &__quote {
+        @include breakpoint(tablet){
+            font-size: 1.1rem;
+        }
+        @include breakpoint(desktop){
+            width:76vw;
+        }
+    }
+
+    &__wrapper {
+        @include breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+        }
+
+        @include breakpoint(desktop){
+        justify-content: center;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        }
+    }
+
+    &__text {
+        @include breakpoint(tablet){
+            width:35vw;
+            margin-top: 0;
+            padding-bottom: $space-under-tablet;
+        }
+    }
 }
+
+.gallery {
+    background-color: $sec-silver;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-left:$space-between;
+    padding-right:$space-between;
+        @include breakpoint(tablet){
+            display: flex;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            justify-content: space-around;
+        }
+        
+    &__title {
+        font-weight: 600;
+        margin:0;
+        padding-top: $space-above;
+        padding-bottom: $space-under;
+        @include breakpoint(tablet){
+            padding-top: $space-above-tablet;
+            padding-bottom: $space-under-tablet;
+            padding-left: 1rem;
+        }
+    }
+
+    &__wrapper {
+        @include breakpoint(tablet){   
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        }
+        @include breakpoint(desktop){
+            padding-left:auto;
+            padding-right:auto;
+        }
+    }
+
+    &__picture {
+        padding-bottom: $space-between;
+        @include breakpoint(tablet){
+            padding:1rem;
+            width:26vw;
+            height: 18vw;
+            flex-wrap: wrap;
+            }
+        @include breakpoint(desktop){
+               padding:3rem;
+            }
+            
+        }
+    }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: $space-between;
+
+    @include breakpoint(tablet){
+        padding: 1rem 4em 2rem 4rem;
+        flex-direction: column;
+    }
+
+    &__media {
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            height: 4rem;
+            width:100rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__icon {
+        padding-right: $space-between;
+        @include breakpoint(tablet){
+            height: 1.5rem;
+            padding:1.2rem;
+            padding-top: 1.2rem;
+
+        }
+    }
+
+    &__site {
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__container {
+        padding-bottom: 1rem;
+        @include breakpoint(tablet){
+        display: flex;
+        width:28vw;
+        flex-direction:column;
+        justify-content: flex-start;
+        
+        }
+    }
+
+    &__logo {
+        @include breakpoint(tablet){
+           position:absolute;
+           left:78vw;
+           bottom: 19.5rem;
+        }
+        @include breakpoint(desktop){
+            padding-left: auto;
+            padding-right: auto;
+            }   
+        }
+    }
