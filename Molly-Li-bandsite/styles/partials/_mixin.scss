@@ -5,8 +5,8 @@
         @media only screen and (min-width:$breakpoint-tablet){
             @content;}
         }
-        @else if $media== desktop {
-            @media only sreen and (min-width:$breakpoint-desktop){
+        @else if $media == desktop {
+            @media only screen and (min-width:$breakpoint-desktop){
                 @content;}
         }
     }
