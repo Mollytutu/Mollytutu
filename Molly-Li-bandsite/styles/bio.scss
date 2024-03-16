@@ -145,8 +145,8 @@ p {
     background-image: url(../assets/Images/hero-bio.jpg);
     background-repeat:no-repeat;
     background-size: cover;
-    background-position-y:20%;
     position: relative;
+
 
     &__darker {
         background-color:#323232;
@@ -164,7 +164,6 @@ p {
         position: absolute;
         height: 100%;
         width: 100vw;
-        padding-left: 1rem;
        
         @include breakpoint(desktop){
         width:70vw;
@@ -175,6 +174,7 @@ p {
         color: white;
         z-index: 1;
         font-weight: 600;
+        padding-left: 1rem;
 
         @include breakpoint(tablet){
             padding-left: 2rem;
@@ -268,6 +268,100 @@ p {
             }
         }
     }
+
+    #name, #comment{
+        display: flex;
+        min-height: 2.25rem;
+        border-radius: .25rem;
+        border:1px solid $sec-silver;
+        padding:0rem 0.75rem;
+        background-color:$sec-white;
+        font-family: "Avenir Next";
+        font-weight: 400;
+        font-size: 0.825rem;
+    
+      
+        @include breakpoint(tablet){
+            min-height: 3rem;
+            padding:1rem;
+        }
+    }
+
+    #comment{
+        height: 18vh;
+        position: relative;
+    }
+
+    ::placeholder{
+        position: absolute;
+        top:0.5rem;
+        color:black;
+        opacity: 1;
+        font-weight: 400;
+    }
+        
+    .form{ 
+        padding-left: $space-between;
+        padding-right:$space-between;
+
+        &__title{
+            font-weight: 600;
+        }
+
+        &__wrapper{
+           display: flex;
+           position:relative
+        }
+
+        &__container{
+            display: flex;
+            flex-direction: column;
+            color: $sec-white;
+            width:100vw;
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        &__averter{
+            border-radius: 50%;
+            width: 2.25rem;
+            height: 2.25rem;
+            object-fit: cover;
+            object-position: 20%;
+            margin:1.125rem 1rem 0 0;
+            padding-left: 0;
+            @include breakpoint(tablet){
+                width:3rem;
+                height:3rem;
+            }
+        }
+
+        &__label{
+            font-family: "Avenir Next";
+            padding-bottom: .25rem;
+            font-weight: 600;
+            font-size:0.625rem;
+            width:60vw;
+            color: $prim-silver;
+        }
+    
+        &__comment{
+            background-color: #323232;
+            color: white;
+            height: 2.5rem;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            padding:0.4rem;
+            border:none;
+            margin-bottom: 0.5rem;
+        }
+
+        &__divider{
+          border:0.7px solid $sec-silver;
+           
+        }
+    }
+
 
 
 .gallery {
