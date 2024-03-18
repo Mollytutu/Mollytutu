@@ -1,1 +1,3 @@
-*.CSS.MAP
+*.css.map
+*.sass.map
+*.scss.map
