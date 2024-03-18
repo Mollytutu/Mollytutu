@@ -40,13 +40,13 @@
         padding-left: 1rem;
 
         @include breakpoint(tablet){
-            padding-left: 2rem;
+            margin-left: 2rem;
         }
 
         @include breakpoint(desktop){
             display: flex;
             justify-self: center;
-            padding-left: 8rem;
+            padding-left: 6rem;
         }
     }
 }
@@ -60,18 +60,15 @@
 
     &__header {
     display: flex;
-    justify-self: flex-start;
-    margin:0;
+    align-self: flex-start;
     padding-top:$space-above;
     padding-bottom:$space-under;
-    padding-left: 1rem;
     font-weight: 600;
 
     @include breakpoint(tablet){
         padding-bottom: $space-between-tablet;
         display: flex;
-        justify-self:flex-start;
-        width: 90vw;
+       margin-left: 2rem;
         font-size: 2.2rem;
     }
 
@@ -115,6 +112,7 @@
     &__article {
         margin-top: 0;
     }
+
     &__wrapper {
         @include breakpoint(tablet){
         display: flex;
@@ -157,20 +155,23 @@
             padding-left: 1rem;
         }
         @include breakpoint(desktop){
-            padding-left: 9.5vw;
+            padding-left: 8vw;
             margin-left: 0;
         }
     }
 
     &__wrapper {
         @include breakpoint(tablet){   
-        display: flex;
-        flex-wrap: wrap;
-        align-self: center;
-        width:84vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-bottom: 2rem;
         }
         @include breakpoint(desktop){
            width:78vw;
+           align-items: center;
+           justify-content: center;
+           margin-left: 6rem;
         }
     }
 
@@ -185,96 +186,250 @@
         }   
     }
 
+#name, #comment{
+    display: flex;
+    // min-height: 2.25rem;
+    border-radius: .25rem;
+    border:1px solid $sec-silver;
+    padding:0rem 0.75rem;
+    background-color:$sec-white;
+    font-family: "Avenir Next";
+    font-weight: 400;
+    font-size: 0.825rem;
 
-    #name, #comment{
-        display: flex;
-        min-height: 2.25rem;
-        border-radius: .25rem;
-        border:1px solid $sec-silver;
-        padding:0rem 0.75rem;
-        background-color:$sec-white;
-        font-family: "Avenir Next";
-        font-weight: 400;
-        font-size: 0.825rem;
-    
-      
-        @include breakpoint(tablet){
-            min-height: 3rem;
-            padding:1rem;
-        }
+    @include breakpoint(tablet){
+        padding:1rem;
+        width:62vw;
     }
+    @include breakpoint(desktop){
+        width:35vw;
+    }
+}
 
-    #comment{
-        height: 18vh;
-        position: relative;
+#name{
+    height: 2.25rem;
+    @include breakpoint(tablet){
     }
+}
 
-    ::placeholder{
-        position: absolute;
-        top:0.5rem;
-        color:black;
-        opacity: 1;
-        font-weight: 400;
+#comment{
+    height: 4rem;
+    position: relative;
+}
+
+::placeholder{
+    position: absolute;
+    top:0.5rem;
+    color:black;
+    opacity: 1;
+    font-weight: 400;
+    @include breakpoint(tablet){
+        padding-top: 1rem;
     }
+}
         
-    .form{ 
-        padding-left: $space-between;
-        padding-right:$space-between;
+.form{ 
+    padding-left: $space-between;
+    padding-right:$space-between;
+    position: relative;
+    @include breakpoint(desktop){
+      width:80vw  
+    }
 
-        &__title{
-            font-weight: 600;
+    &__title{
+        font-weight: 600;
+        @include breakpoint(tablet){
+            padding-left: 2rem;
+        }
+        @include breakpoint(desktop){
+            margin-left: 8rem;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        position:relative;
+    @include breakpoint(tablet){
+        margin-left: 9vw;
+        }
+    @include breakpoint(desktop){
+        width:40vw;
+        margin-left: 20vw;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        color: $sec-white;
+        width:100vw;
+        position: relative;
+        margin-left: 1rem;
+        @include breakpoint(tablet){
+            align-items: flex-end;
+            margin-right: 6rem;
+        }
+        @include breakpoint(desktop){
+            width:40vw
+        }
+    }
+
+    &__averter{
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        object-fit: cover;
+        object-position: 20%;
+        margin:1.125rem 1rem 0 0;
+        padding-left: 0;
+        @include breakpoint(tablet){
+            width:3rem;
+            height:3rem;
         }
 
-        &__wrapper{
-           display: flex;
-           position:relative
-        }
+    }
 
-        &__container{
-            display: flex;
-            flex-direction: column;
-            color: $sec-white;
-            width:100vw;
-            position: relative;
-            margin-left: 1rem;
-        }
+    &__label{
+        font-family: "Avenir Next";
+        padding-bottom: .25rem;
+        font-weight: 600;
+        font-size:0.625rem;
+        width:60vw;
+        color: $prim-silver;
+        @include breakpoint(tablet){
+            width:66vw;}
+        @include breakpoint(desktop){
+            width:38vw;
+        } 
+    }
 
-        &__averter{
-            border-radius: 50%;
-            width: 2.25rem;
-            height: 2.25rem;
-            object-fit: cover;
-            object-position: 20%;
-            margin:1.125rem 1rem 0 0;
-            padding-left: 0;
-            @include breakpoint(tablet){
-                width:3rem;
-                height:3rem;
+    &__comment{
+        background-color: #323232;
+        color: white;
+        height: 2.5rem;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        padding:0.4rem;
+        border:none;
+        margin-bottom: 0.5rem;
+
+        @include breakpoint(tablet){
+            display: grid;
+            min-width: 9.375rem;
+            width:20vw;
+            align-items: center;
+            justify-content: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            flex-wrap: wrap;
+            margin-left:vw;
+        }
+        @include breakpoint(desktop){
+            margin-left:18rem;
+            width:13em;
             }
         }
 
-        &__label{
-            font-family: "Avenir Next";
-            padding-bottom: .25rem;
-            font-weight: 600;
-            font-size:0.625rem;
-            width:60vw;
-            color: $prim-silver;
-        }
-    
-        &__comment{
-            background-color: #323232;
-            color: white;
-            height: 2.5rem;
-            border-radius: 0.25rem;
-            font-size: 1rem;
-            padding:0.4rem;
-            border:none;
-            margin-bottom: 0.5rem;
-        }
-
-        &__divider{
-          border:0.7px solid $sec-silver;
-           
+    &__divider{
+        border:0.7px solid $sec-silver;
         }
     }
+
+    
+.comment{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet){
+        margin-left: 6rem;  
+        margin-right: 6rem; 
+    }
+    @include breakpoint(desktop){
+        margin-right: 12rem;
+        margin-left: 18rem;
+    }
+
+    &__container{
+        width:10vw;
+        margin-right: 1rem;
+        @include breakpoint(tablet){
+        width:3rem;
+        }
+    }
+
+    &__image{
+        opacity: 0.5;
+        height: 2.25rem;
+        width: 2.25rem;
+        margin-right: 2rem;
+        border-radius: 50%;
+        color: #e1e1e1;
+        @include breakpoint(tablet){
+            width:3rem;
+            height:3rem;
+        }
+    }
+
+    &__time{
+        position: absolute;
+        height: 100%;
+        width:100%;
+        color:$prim-silver;
+        display: flex;
+        flex-direction: row-reverse;
+        font-weight: 400;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction:column;
+        position: relative;
+        width:68vw;
+        margin-left: 1rem;
+        @include breakpoint(tablet){
+            width:66vw;
+            margin-left: 3rem;
+        }
+        @include breakpoint(desktop){
+            width:36vw;
+        }
+    }
+
+    &__name{
+        margin-bottom: 0;
+        width: 40vw;
+    }
+
+    &__text{
+        width:30rem;
+    }
+
+    &__hr{
+       width:92vw;
+        @include breakpoint(tablet){
+            width:80vw;
+        }
+        @include breakpoint(desktop){
+            width:70vw;
+        }  
+    }
+
+    &__hr1{
+        width:92vw;
+        @include breakpoint(tablet){
+            width:80vw;
+        }
+        @include breakpoint(desktop){
+            width:70vw;
+        }  
+    }
+    &__box{
+        width:100vw; 
+        margin-left: 2vw;
+        margin-right: 2vw;
+        }
+    }
+

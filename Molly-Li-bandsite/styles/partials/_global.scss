@@ -21,10 +21,6 @@ a{
     margin: 0;
 }
 
-img {
-    max-width: 100%;
-  }
-
 ul{
     list-style-type: none;
     padding-inline-start: 0;
@@ -116,6 +112,7 @@ p {
             justify-content: flex-end;
             padding-bottom:1.5rem;
             width:20vw;
+            margin-left: -1rem;
         }
     }
 
