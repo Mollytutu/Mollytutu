@@ -464,6 +464,9 @@ h4 {
 .shows__section:hover {
   background-color: #fafafa;
 }
+.shows__section:active {
+  background-color: #E1E1E1;
+}
 .shows__title {
   color: #afafaf;
   margin: 0;
@@ -521,7 +524,7 @@ h4 {
     padding-right: 2rem;
   }
 }
-.shows__button:active .shows__sections {
+.shows__button:active {
   background-color: #E1E1E1;
 }
 .shows__hr {

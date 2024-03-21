@@ -364,12 +364,15 @@
         opacity: 0.5;
         height: 2.25rem;
         width: 2.25rem;
-        margin-right: 2rem;
         border-radius: 50%;
         color: #e1e1e1;
+        margin-top: 1rem;
+        margin-right: 0;
+        margin-left: 1rem;
         @include breakpoint(tablet){
             width:3rem;
             height:3rem;
+            margin-top: 2rem;
         }
     }
 
@@ -391,7 +394,7 @@
         margin-left: 1rem;
         @include breakpoint(tablet){
             width:66vw;
-            margin-left: 3rem;
+            margin-left: 4rem;
         }
         @include breakpoint(desktop){
             width:36vw;
@@ -405,6 +408,7 @@
 
     &__text{
         width:30rem;
+
     }
 
     &__hr{
@@ -420,10 +424,10 @@
     &__hr1{
         width:92vw;
         @include breakpoint(tablet){
-            width:80vw;
+            width:60vw;
         }
         @include breakpoint(desktop){
-            width:70vw;
+            width:45vw;
         }  
     }
     &__box{

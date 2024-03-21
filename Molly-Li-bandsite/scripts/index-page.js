@@ -11,11 +11,11 @@ comments = [
       comment:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",},
 ]
 
-const pickS=document.querySelector(".comment");
+const selectSection=document.querySelector(".comment");
 
-const divEl=document.createElement('div');
-divEl.classList.add("comment__box");
-pickS.appendChild(divEl);
+// const divEl10=document.createElement('div');
+// divEl10.classList.add("comment__box");
+// selectorSector.appendChild(divEl10);
 
 const hrAbove=document.createElement("hr");
 hrAbove.classList.add('comment__hr');
@@ -24,67 +24,69 @@ divEl.appendChild(hrAbove);
 function renderComments(){
 comments.forEach((e) => {
 
-const divEl0=document.createElement('div');
-divEl0.classList.add("comment__container");
-pickS.appendChild(divEl0);
+const divEl11=document.createElement('div');
+divEl11.classList.add("comment__container");
+selectorSector.appendChild(divEl11);
+
+const divEl01=document.createElement('div');
+divEl01.classList.add("comment__container");
+divEl11.appendChild(divEl01)
 
 const imgEl=document.createElement("img");
 imgEl.classList.add("comment__image");
 imgEl.setAttribute('src', 'https://via.placeholder.com/48x48/E1E1E1/E1E1E1')
-divEl0.appendChild(imgEl);
+divEl01.appendChild(imgEl);
 
-const divEl1=document.createElement('div');
-divEl1.classList.add("comment__wrapper");
-pickS.appendChild(divEl1);
+const divEl02=document.createElement('div');
+divEl02.classList.add("comment__wrapper");
+divEl02.appendChild(divEl11);
 
 const nameEl=document.createElement('h3');
 nameEl.classList.add("comment__name");
 nameEl.innerHTML=(e).name,
-divEl1.appendChild(nameEl);
+divEl02.appendChild(nameEl);
 
 const timeEl=document.createElement('h3');
 timeEl.classList.add("comment__time");
 // const timeValue=(e).date;
 // timeEl.setAttribute('datetime',timeValue);
 timeEl.innerHTML=(e).date;
-divEl1.appendChild(timeEl);
+divEl02.appendChild(timeEl);
 
 const textEl=document.createElement('p');
 textEl.classList.add("comment__text");
 textEl.innerHTML=(e).comment;
-divEl1.appendChild(textEl);
-
-const divEl3=document.createElement('div');
-divEl3.classList.add("comment__box");
-divEl1.appendChild(divEl3);
+divEl02.appendChild(textEl);
 
 const hrUnder=document.createElement("hr");
 hrUnder.classList.add('comment__hr1');
-pickS.appendChild(hrUnder);
+selectorSector.appendChild(hrUnder);
 
 })
 }
 
-renderComments();
+// renderComments(){
 
-const insertHere=document.querySelector(".divEl");
+// const insertHere=document.querySelector(".divEl");
 
-insertHere.addEventListener('submit', (event) => {
-    event.preventDefault();
+// insertHere.addEventListener('submit', (event) => {
+//     event.preventDefault();
 
-const nameVal = event.target.name.value;
-const dateVal = new Date();
-const commentVal = event.target.comment.value;
+// const nameVal = event.target.name.value;
+// const dateVal = new Date();
+// const commentVal = event.target.comment.value;
 
-const newEntry = {
-    name: nameVal,
-    date: dateVal,
-    text: commentVal,
-  };
+// const newEntry = {
+//     name: nameVal,
+//     date: dateVal,
+//     text: commentVal,
+//   };
   
-  comments.push(newEntry);
+//   comments.push(newEntry);
+//   event.target.reset();
+// };
 
-  renderComments();
+//   renderComments();
 
-  event.target.reset();
-});
+ 
+

@@ -25,11 +25,11 @@ const showSchedules = [
     },
 ];
 
-const pickSection=document.querySelector('.shows');
+const selectSection=document.querySelector('.shows');
 
 const divE0=document.createElement('div');
     divE0.classList.add('shows__header1');
-    pickSection.appendChild(divE0);
+    selectSection.appendChild(divE0);
 
     const showTitleE=document.createElement('h2');
     showTitleE.classList.add('shows__header');
@@ -41,7 +41,7 @@ function renderShows() {
         // console.log(eachShow);
     const divE=document.createElement('div');
     divE.classList.add('shows__section');
-    pickSection.appendChild(divE);
+    selectSection.appendChild(divE);
 
     const dateTitleE=document.createElement('h4');
     dateTitleE.classList.add('shows__title');
@@ -80,7 +80,7 @@ function renderShows() {
 
     const divE1=document.createElement('div');
     divE1.classList.add('shows__hrWrapper');
-    pickSection.appendChild(divE1);
+    selectSection.appendChild(divE1);
 
     const hrE=document.createElement('hr');
     hrE.classList.add("shows__hr");

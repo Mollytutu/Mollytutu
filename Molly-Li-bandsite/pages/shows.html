@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Landing Page</title>
-  <link href="../styles/shows.css" rel="stylesheet" />
-  <script src="../scripts/build-shows-page.js" defer></script> 
+  <link href="../styles/shows.css" rel="stylesheet">
+  <script src="../scripts/build-shows-page.js" defer></script>
+  <script src="../scripts/band-site-api.js" defer></script>  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
 </head>
 
 <body>
@@ -44,7 +46,8 @@
                 <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
                     <a href="https://soundcloud.com/whethan" title="Whethan" target="_blank" style="color: #cccccc; text-decoration: none;"></a> 
                     <a href="https://soundcloud.com/whethan/whethan-snakehips-ag-club-room" title="Whethan &amp; Snakehips - ROOM IS ON FIRE (feat. AG Club)" target="_blank" style="color: #cccccc; text-decoration: none;"></a>
-                </div>    
+                </div>  
+            </div>  
         </section>
         <!-- show section -->
         <section  class="shows">
@@ -68,22 +71,23 @@
             </section>
             <div class="footer__site">
                 <div class="footer__container">
-                <h4>The Bees Knees Management</h4>
-                <p>503 Broadway Penthouse,<br>
-                    New York, NY 10012, USA</p>
-                <a href="mailto:info@thebeesknees.com"><p>info@thebeesknees.com</p></a>
-            </div>
-            <div class="footer__container">
-                <h4>Limitless Artist Group</h4>
-                <p>Booking Agent for<br>
-                    US / South America / Japan/</p>
-                <a href="mailto:info@thebeesknees.com"><p>info@thebeesknees.com</p></a>
-            </div>
-            <div class="footer__container">
-                <h4>ARCH Entertainment</h4>
-                <p>Booking Agent for<br>
-                    UK / EU / AU</p>
-                <a href="mailto:info@thebeesknees.com"><p>info@thebeesknees.com</p></a>
+                    <h4>The Bees Knees Management</h4>
+                    <p>503 Broadway Penthouse,<br>
+                        New York, NY 10012, USA</p>
+                    <a href="mailto:info@thebeesknees.com"><p>info@thebeesknees.com</p></a>
+                </div>
+                <div class="footer__container">
+                    <h4>Limitless Artist Group</h4>
+                    <p>Booking Agent for<br>
+                        US / South America / Japan/</p>
+                    <a href="mailto:info@thebeesknees.com"><p>info@thebeesknees.com</p></a>
+                </div>
+                <div class="footer__container">
+                    <h4>ARCH Entertainment</h4>
+                    <p>Booking Agent for<br>
+                        UK / EU / AU</p>
+                    <a href="mailto:info@thebeesknees.com"><p>info@thebeesknees.com</p></a>
+                </div>
             </div>
             <div class="logo">
                 <img src="../assets/Logo/Logo-bandsite.svg"  class="footer__logo" alt="Band site Logo">

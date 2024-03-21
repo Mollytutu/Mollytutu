@@ -234,7 +234,7 @@ h4{
                 background-color: $sec-silver;
             }
         }
-    }
+    
 
     &__hr{
         border-color: $sec-silver;
@@ -250,7 +250,7 @@ h4{
       
         }
 
-    
+    }
 
 .footer{
     @include breakpoint(tablet){
