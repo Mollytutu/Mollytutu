@@ -13,59 +13,45 @@ comments = [
 
 const selectSection=document.querySelector(".comment");
 
-// const divEl10=document.createElement('div');
-// divEl10.classList.add("comment__box");
-// selectorSector.appendChild(divEl10);
-
-const hrAbove=document.createElement("hr");
-hrAbove.classList.add('comment__hr');
-divEl.appendChild(hrAbove);
-
 function renderComments(){
 comments.forEach((e) => {
+    const divEl10=document.createElement('div');
+    divEl10.classList.add("comment__container");
+    selectSection.appendChild(divEl10);
 
-const divEl11=document.createElement('div');
-divEl11.classList.add("comment__container");
-selectorSector.appendChild(divEl11);
+    const divEl01=document.createElement('div');
+    divEl01.classList.add("comment__left");
+    divEl10.appendChild(divEl01)
 
-const divEl01=document.createElement('div');
-divEl01.classList.add("comment__container");
-divEl11.appendChild(divEl01)
+    const imgEl=document.createElement("img");
+    imgEl.classList.add("comment__image");
+    imgEl.setAttribute('src', 'https://via.placeholder.com/48x48/E1E1E1/E1E1E1')
+    divEl01.appendChild(imgEl);
 
-const imgEl=document.createElement("img");
-imgEl.classList.add("comment__image");
-imgEl.setAttribute('src', 'https://via.placeholder.com/48x48/E1E1E1/E1E1E1')
-divEl01.appendChild(imgEl);
+    const divEl02=document.createElement('div');
+    divEl02.classList.add("comment__right");
+    divEl10.appendChild(divEl02);
 
-const divEl02=document.createElement('div');
-divEl02.classList.add("comment__wrapper");
-divEl02.appendChild(divEl11);
+    const nameEl=document.createElement('h3');
+    nameEl.classList.add("comment__name");
+    nameEl.innerHTML=(e).name,
+    divEl02.appendChild(nameEl);
 
-const nameEl=document.createElement('h3');
-nameEl.classList.add("comment__name");
-nameEl.innerHTML=(e).name,
-divEl02.appendChild(nameEl);
+    const timeEl=document.createElement('h3');
+    timeEl.classList.add("comment__time");
+    // const timeValue=(e).date;
+    // timeEl.setAttribute('datetime',timeValue);
+    timeEl.innerHTML=(e).date;
+    divEl02.appendChild(timeEl);
 
-const timeEl=document.createElement('h3');
-timeEl.classList.add("comment__time");
-// const timeValue=(e).date;
-// timeEl.setAttribute('datetime',timeValue);
-timeEl.innerHTML=(e).date;
-divEl02.appendChild(timeEl);
-
-const textEl=document.createElement('p');
-textEl.classList.add("comment__text");
-textEl.innerHTML=(e).comment;
-divEl02.appendChild(textEl);
-
-const hrUnder=document.createElement("hr");
-hrUnder.classList.add('comment__hr1');
-selectorSector.appendChild(hrUnder);
-
-})
+    const textEl=document.createElement('p');
+    textEl.classList.add("comment__text");
+    textEl.innerHTML=(e).comment;
+    divEl02.appendChild(textEl);
+});
 }
 
-// renderComments(){
+renderComments();
 
 // const insertHere=document.querySelector(".divEl");
 

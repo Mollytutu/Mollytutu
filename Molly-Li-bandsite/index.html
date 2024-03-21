@@ -42,8 +42,8 @@
         </section>
 
         <Section class="article">
-            <div class="article__header">
-                <h1>About the Musicians</h1>
+            <div class="article__container">
+                <h2 class="article__header">About the Musicians</h2>
             </div>
             <div class="article__image">
             </div>
@@ -51,8 +51,8 @@
                 <h3 class="article__article">“We push each other to be the best. It’s not uncommon 
                     for one of us to say ‘this needs
                     to be better, back to the drawing board”</h3>
-                <h3 class="article__article">- Lead vocalist of The Bees Knees</h3>
-                <h3 class="article__article">The Bees Knees</h3>
+                <h3 class="article__quote">- Lead vocalist of The Bees Knees</h3>
+                <h3 class="article__subtitle">The Bees Knees</h3>
             </div>
             <div class="article__wrapper">
                 <div>
@@ -101,17 +101,25 @@
 
          <section class="form-comment">
          <form class="form">
-            <h2 class="form__title">Join the Conversation</h2>
+            <div>
+                <h2 class="form__title">Join the Conversation</h2>
+            </div>
             <div class="form__wrapper">
-                <div>
+                <div class="form__left">
                     <img src="./assets/Images/Mohan-muruge.jpg" class="form__averter" alt="Mohan averter">
                 </div>
-                <div class="form__container">
-                    <label class="form__label" for="name">NAME</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name"><br>
-                    <label class="form__label" for="comment">COMMENT</label>
-                    <input type="text" id="comment" name="comment" placeholder="Add a new comment"><br>
-                    <button class="form__comment">COMMENT</button>
+                <div class="form__right">
+                    <div class="form__section">
+                        <label class="form__label" for="name">NAME</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form__section">
+                        <label class="form__label" for="comment">COMMENT</label>
+                        <input type="text" id="comment" name="comment" placeholder="Add a new comment">
+                    </div>
+                    <div class="form__section form__buttom">
+                        <button class="form__comment">COMMENT</button>
+                    </div>
                 </div>
             </div>
         </form>

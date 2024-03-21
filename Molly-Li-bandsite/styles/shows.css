@@ -21,6 +21,10 @@ body {
   max-width: 120rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 .logo {
   max-height: 1.25rem;
   max-width: 7.5rem;
@@ -134,7 +138,6 @@ p {
     justify-content: flex-end;
     padding-bottom: 1.5rem;
     width: 20vw;
-    margin-left: -1rem;
   }
 }
 .nav__list {
@@ -154,7 +157,7 @@ p {
 @media only screen and (min-width: 768px) {
   .nav__bar {
     padding-top: 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     padding-bottom: 0;
     font-size: 0.875rem;
   }
@@ -184,7 +187,7 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .nav__bar2 {
-    width: 6rem;
+    width: 4rem;
   }
 }
 .nav__item {
@@ -202,10 +205,12 @@ p {
   flex-direction: column;
   position: relative;
   padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100;
 }
 @media only screen and (min-width: 768px) {
   .footer {
-    padding: 1rem 4em 2rem 4rem;
+    padding: 1rem 2rem 2rem 2rem;
     flex-direction: column;
   }
 }
@@ -215,7 +220,6 @@ p {
     flex-direction: row;
     justify-content: flex-start;
     height: 4rem;
-    width: 100rem;
     padding-bottom: 2rem;
   }
 }
