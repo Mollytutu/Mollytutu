@@ -1,26 +1,25 @@
-import BandSiteApi from './band-site-api.js';
-
+import {BandSiteApi} from './band-site-api.js';
 
 const API_URL = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
 const API_KEY = '<1a5aa7ad-7d9c-4102-8608-8b5b93bcd653>'
 
-function apiUrl(endpoint) {
-  return`${API_URL}${endpoint}?api_key=${API_KEY}`;
-}
-
-const apiComments= apiUrl('/comments');
-console.log(apiComments);
-
-
-const bandSiteApi = new BandSiteApi(this.apiKey);
+const bandSiteApi = new BandSiteApi();
 const selectSection=document.querySelector(".comment");
+
+
+function timestampDateString(timestamp) {
+    const dateTimestampt = new Date(timestamp);
+    const year = dateTimestampt .getFullYear();
+    const month = (dateTimestampt .getMonth() + 1).toString().padStart(2, '0');
+    const dayTimestampt  = dateTimestampt .getDate().toString().padStart(2, '0');
+    return `${month}/${dayTimestampt}/${year}`} 
 
 async function renderComments(){
     try{
         const comments = await bandSiteApi.getComments();
         selectSection.innerHTML='';
-    
-    comments.forEach((e) => {
+
+        comments.forEach((e) => {
         const divEl10=document.createElement('div');
         divEl10.classList.add("comment__container");
         selectSection.appendChild(divEl10);
@@ -45,7 +44,7 @@ async function renderComments(){
 
         const timeEl=document.createElement('h3');
         timeEl.classList.add("comment__time");
-        timeEl.innerHTML=(e).date;
+        timeEl.innerHTML=timestampDateString(e.timestamp);
         divEl02.appendChild(timeEl);
 
         const textEl=document.createElement('p');
@@ -68,20 +67,17 @@ formEl.addEventListener('submit', async(event) => {
     event.preventDefault();
 
     const nameVal = event.target.name.value;
-    const dateVal = new Date().toLocaleDateString();
     const commentVal = event.target.comment.value;
 
     const newEntry = {
         name: nameVal,
-        date: dateVal,
         comment: commentVal,
     };
-    console.log('New Entery:', newEntry);
-    comments.unshift(newEntry);
 
-    try{ await bandSiteApi.postComment(newComment);
-         await renderComments();
-         event.target.reset();
+    try{ 
+        await bandSiteApi.postComment(newEntry);
+        await renderComments();
+        event.target.reset();
     }catch(error){
         console.error('Error posting comment:', error);
     }
