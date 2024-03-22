@@ -85,8 +85,9 @@ function renderShows() {
     const hrE=document.createElement('hr');
     hrE.classList.add("shows__hr");
     divE1.appendChild(hrE);
+
     })
-}
+}   
 
 renderShows();
 

@@ -26,7 +26,7 @@ img {
 }
 
 .logo {
-  max-height: 1.25rem;
+  height: 1.5rem;
   max-width: 7.5rem;
 }
 
@@ -127,6 +127,11 @@ p {
     justify-content: flex-start;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .nav__container {
+    padding-left: 5rem;
+  }
+}
 .nav__logo {
   height: 1.25rem;
   padding-top: 1.5rem;
@@ -137,7 +142,8 @@ p {
   .nav__logo {
     justify-content: flex-end;
     padding-bottom: 1.5rem;
-    width: 20vw;
+    padding-right: 2rem;
+    width: 10rem;
   }
 }
 .nav__list {
@@ -176,7 +182,7 @@ p {
             text-decoration: underline 3px white;
     text-underline-offset: 1.7rem;
     align-self: center;
-    width: 10rem;
+    width: 6rem;
   }
 }
 .nav__bar2 {
@@ -187,7 +193,7 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .nav__bar2 {
-    width: 4rem;
+    width: 6rem;
   }
 }
 .nav__item {
@@ -206,12 +212,12 @@ p {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 100;
+  width: 100vw;
 }
 @media only screen and (min-width: 768px) {
   .footer {
     padding: 1rem 2rem 2rem 2rem;
-    flex-direction: column;
+    width: 100vw;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -247,15 +253,16 @@ p {
   .footer__site {
     display: flex;
     align-self: center;
-    justify-content: space-between;
-    width: 84vw;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin-left: -4rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .footer__site {
     justify-content: flex-start;
     width: 77vw;
+    margin-left: -6rem;
   }
 }
 .footer__container {
@@ -265,19 +272,19 @@ p {
   .footer__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    width: 30vw;
   }
 }
 @media only screen and (min-width: 1280px) {
   .footer__container {
-    padding-right: 4rem;
+    width: 20vw;
   }
 }
 @media only screen and (min-width: 768px) {
   .footer__logo {
     position: absolute;
     left: 78vw;
-    bottom: 19.5rem;
+    bottom: 20.5rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -286,10 +293,10 @@ p {
     padding-right: 3rem;
   }
 }
-@media only screen and (min-width: 768px) {
-  .footer__copyRight {
+@media only screen and (min-width: 1280px) {
+  .footer__copyright {
     width: 100vw;
-    padding-right: 10rem;
+    margin-left: 6rem;
   }
 }
 
@@ -494,10 +501,6 @@ p {
   .gallery__title {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .gallery__title {
     margin-left: 0.5rem;
   }
 }
@@ -618,16 +621,11 @@ p {
   width: 100%;
 }
 .form__left {
-  width: 15vw;
+  width: 4rem;
   padding-right: 1rem;
   display: flex;
   justify-content: flex-end;
   border-bottom: 0.15rem solid #E1E1E1;
-}
-@media only screen and (min-width: 768px) {
-  .form__left {
-    width: 3rem;
-  }
 }
 .form__right {
   display: flex;
@@ -723,9 +721,10 @@ p {
   margin-left: 1rem;
   margin-right: 1rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin-bottom: 2rem;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   .comment {
@@ -733,27 +732,22 @@ p {
     margin-right: 4rem;
   }
 }
-@media only screen and (min-width: 1280px) {
-  .comment {
-    margin-left: 20rem;
-    margin-right: 20rem;
-  }
-}
 .comment__container {
   display: flex;
   flex-direction: row;
-  border-bottom: 0.15rem solid #E1E1E1;
-}
-.comment__left {
-  width: 15vw;
-  margin-right: 1rem;
-  display: flex;
-  justify-content: end;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
-  .comment__left {
-    width: 3rem;
+  .comment__container {
+    justify-content: center;
   }
+}
+.comment__left {
+  width: 4rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: end;
+  border-bottom: 0.15rem solid #E1E1E1;
 }
 .comment__image {
   opacity: 0.5;
@@ -785,6 +779,7 @@ p {
   flex-direction: column;
   position: relative;
   width: 75vw;
+  border-bottom: 0.15rem solid #E1E1E1;
 }
 @media only screen and (min-width: 768px) {
   .comment__right {
@@ -793,7 +788,7 @@ p {
 }
 @media only screen and (min-width: 1280px) {
   .comment__right {
-    width: 34vw;
+    width: 36vw;
   }
 }
 .comment__name {
@@ -810,20 +805,7 @@ p {
 }
 @media only screen and (min-width: 1280px) {
   .comment__text {
-    width: 30vw;
-  }
-}
-.comment__hr {
-  width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .comment__hr {
-    width: 80vw;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .comment__hr {
-    width: 70vw;
+    width: 36vw;
   }
 }
 .comment__box {

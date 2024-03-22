@@ -179,7 +179,6 @@
     @include breakpoint(desktop){
         padding-left: 8rem;
         padding-right: 8rem;
-    
     }
         
     &__title {
@@ -190,9 +189,10 @@
         @include breakpoint(tablet){
             padding-top: 2rem;
             padding-bottom: 2rem;
+            margin-left: 0.5rem;
+           
         }
         @include breakpoint(desktop){
-           margin-left: 0.5rem;
         }
     }
 
@@ -274,6 +274,7 @@
     padding-left: $space-between;
     padding-right:$space-between;
     position: relative;
+
     @include breakpoint(desktop){
         padding-left: 5rem;
         padding-right: 5rem;
@@ -296,15 +297,13 @@
     }
 
     &__left{
-        width:15vw;
+        width:4rem;
         padding-right: 1rem;
         display: flex;
         justify-content: flex-end;
         border-bottom: 0.15rem solid $sec-silver;
-        @include breakpoint(tablet){
-            width: 3rem;
         }
-    }
+    
 
     &__right{
         display: flex;
@@ -386,7 +385,6 @@
         @include breakpoint(tablet){
             align-items:flex-end ;
             margin-left: -0.8rem;
-
         }
     }
 }
@@ -395,36 +393,34 @@
     margin-left: 1rem;
     margin-right: 1rem;
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 2rem;
+    position: relative;
 
     @include breakpoint(tablet){
         margin-left: 4rem;  
         margin-right:4rem; 
     }
     @include breakpoint(desktop){
-    margin-left: 20rem;
-    margin-right: 20rem;
-
     }
 
     &__container{
         display: flex;
         flex-direction: row;
-        border-bottom: 0.15rem solid $sec-silver;
-    //     @include breakpoint(tablet){
-    //     }
+        position: relative;
+        @include breakpoint(tablet){
+            // width:65vw;
+            justify-content: center;
+        }
     }
 
     &__left{
-        width:15vw;
-        margin-right: 1rem;
+        width:4rem;
+        padding-right: 1rem;
         display: flex;
         justify-content: end;
-        @include breakpoint(tablet){
-        width:3rem;
-        }
+        border-bottom: 0.15rem solid $sec-silver;
     }
 
     &__image{
@@ -457,11 +453,12 @@
         flex-direction:column;
         position: relative;
         width:75vw;
+        border-bottom: 0.15rem solid $sec-silver;
         @include breakpoint(tablet){
             width:60vw;
         }
         @include breakpoint(desktop){
-            width:34vw;
+            width:36vw;
         }
     }
 
@@ -476,18 +473,8 @@
             width:60vw;
         }
         @include breakpoint(desktop){
-                width:30vw;
+            width:36vw;
         }
-    }
-
-    &__hr{
-       width:100%;
-        @include breakpoint(tablet){
-            width:80vw;
-        }
-        @include breakpoint(desktop){
-            width:70vw;
-        }  
     }
     
     &__box{

@@ -15,7 +15,7 @@ img{
 }
 
 .logo{
-    max-height: 1.25rem;
+    height: 1.5rem;
     max-width: 7.5rem;
 }
 
@@ -102,8 +102,11 @@ p {
     width: 100vw;
     &__container {
         @include breakpoint(tablet){
-        display: flex;
-        justify-content: flex-start;
+            display: flex;
+            justify-content: flex-start;
+        }
+        @include breakpoint(desktop){
+            padding-left: 5rem;
         }
     }
 
@@ -115,7 +118,8 @@ p {
         @include breakpoint(tablet){
             justify-content: flex-end;
             padding-bottom:1.5rem;
-            width:20vw;
+            padding-right: 2rem;
+            width:10rem;
         }
     }
 
@@ -150,7 +154,7 @@ p {
             text-decoration: underline 3px white;
             text-underline-offset: 1.7rem;
             align-self: center;
-            width: 10rem;
+            width: 6rem;
         }
     }
         
@@ -160,7 +164,7 @@ p {
         width:50vw;
        margin: auto;
        @include breakpoint(tablet){
-       width:4rem;
+       width:6rem;
        }
     }
 
@@ -179,11 +183,11 @@ p {
     position: relative;
     padding-left: $space-between;
     padding-right: $space-between;
-    width:100;
+    width:100vw;
 
     @include breakpoint(tablet){
         padding: 1rem 2rem 2rem 2rem;
-        flex-direction: column;
+        width:100vw;
     }
 
     &__media {
@@ -218,13 +222,14 @@ p {
         @include breakpoint(tablet){
             display: flex;
             align-self: center;
-            justify-content:space-between;
-            width:84vw;
+            justify-content:space-around;
             flex-wrap: wrap;
+            margin-left: -4rem;
         }
         @include breakpoint(desktop){
             justify-content: flex-start;
             width:77vw;
+            margin-left: -6rem;
         }
     }
 
@@ -234,12 +239,10 @@ p {
         @include breakpoint(tablet){
         display: flex;
         flex-direction:column;
-        justify-content: space-evenly;
-     
-            }
-
+        width:30vw;
+        }
         @include breakpoint(desktop){
-        padding-right: 4rem;
+        width:20vw;
         }
     }
 
@@ -247,7 +250,7 @@ p {
         @include breakpoint(tablet){
            position:absolute;
            left:78vw;
-           bottom: 19.5rem;
+           bottom: 20.5rem;
         }
         @include breakpoint(desktop){
             padding-left: 3rem;
@@ -255,10 +258,11 @@ p {
             }   
         }
 
-    &__copyRight {
-        @include breakpoint(tablet){
+    &__copyright{
+        @include breakpoint(desktop){
             width:100vw;
-            padding-right: 10rem;
+            margin-left: 6rem;
         }
+
     }
 }
