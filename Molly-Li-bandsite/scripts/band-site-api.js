@@ -1,36 +1,52 @@
-// const API_URL = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
-// const API_KEY = '<1a5aa7ad-7d9c-4102-8608-8b5b93bcd653';
+const API_URL = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
+const API_KEY = '<1a5aa7ad-7d9c-4102-8608-8b5b93bcd653>'
 
-// function apiUrl(endpoint) {
-//   const url = `${API_URL}${endpoint}?api_key=${API_KEY}`;
-// }
+function apiUrl(endpoint) {
+  return`${API_URL}${endpoint}?api_key=${API_KEY}`;
+}
 
-// const apiComments= apiUrl(comments);
-// console.log(apiComments);
+const apiComments= apiUrl('/comments');
+console.log(apiComments);
 
-// class BandSiteApi{
-//     constructor(apiKey){
-//         this.apiKey=apiKey;
-//         this.baseUrl= 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
-//     }
+// Class  BandSiteApi
 
-//     async postComment(comment) {
-//         try {
-//             const response= awaitaxios.get(`${this.baseUrl}${comments}?api_key=${API_KEY}`);
-//         }catch(error){ console.log('your api link is broken');
-//         }
-//     }
+class BandSiteApi{
+    constructor(apiKey){
+        this.apiKey=API_KEY;
+        this.baseUrl=API_URL;
+    }
 
-//     async getComments() {
-//         try {
-//             const response = await axios.get(`${this.baseUrl}/comments`), 
-//             data = response.data;
-//             // Sorting comments from newest to oldest
-//             return comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-//         }catch(error)
-//         {console.log("Sorry, get comments failed")
-//             }
-//         };
-// }
+    async postComment(comment) {
+        try {
+            const response= await axios.post(`${this.baseUrl}${comment}?api_key=${this.apiKey}`);
+            return response.data;
+        }catch(error){ 
+            console.log('Failed to post comment:',error);
+        }
+    }
+
+    async getComments() {
+        try {
+            const response = await axios.get(`${this.baseUrl}/comments?api_key=${this.apiKey}`); 
+            const commentsData = response.data;
+            // Sorting comments from newest to oldest
+            comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+            return commentsData;
+        }catch(error){
+            console.log("Sorry, Failed to fetch comments:",error);
+            }
+        };
     
-//  const bandSiteApi = new BandSiteApi(apiKey);
+    async getShows() {
+        try{
+            const response = await axios.get(`${this.baseUrl}/showdates?api_key=${this.apiKey}`); 
+            const showsData = response.data;
+            return showsData;
+        }catch(error){
+            console.log("Sorry, not able to access shows information",error)
+        }
+    }
+}
+    
+
+ 
