@@ -1,4 +1,4 @@
-import {BandSiteApi} from './band-site-api.js';
+import {BandSiteApi, timestampDateString} from './band-site-api.js';
 
 const API_URL = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
 const API_KEY = '<1a5aa7ad-7d9c-4102-8608-8b5b93bcd653>'
@@ -6,13 +6,12 @@ const API_KEY = '<1a5aa7ad-7d9c-4102-8608-8b5b93bcd653>'
 const bandSiteApi = new BandSiteApi();
 const selectSection=document.querySelector(".comment");
 
-
-function timestampDateString(timestamp) {
-    const dateTimestampt = new Date(timestamp);
-    const year = dateTimestampt .getFullYear();
-    const month = (dateTimestampt .getMonth() + 1).toString().padStart(2, '0');
-    const dayTimestampt  = dateTimestampt .getDate().toString().padStart(2, '0');
-    return `${month}/${dayTimestampt}/${year}`} 
+// export function timestampDateString(timestamp) {
+//     const dateTimestampt = new Date(timestamp);
+//     const year = dateTimestampt .getFullYear();
+//     const month = (dateTimestampt .getMonth() + 1).toString().padStart(2, '0');
+//     const dayTimestampt  = dateTimestampt .getDate().toString().padStart(2, '0');
+//     return `${month}/${dayTimestampt}/${year}`} ;
 
 async function renderComments(){
     try{
@@ -55,7 +54,7 @@ async function renderComments(){
     } catch (error){
         console.error("Error fatching comments",error)
     }
-}
+};
 
 renderComments();
 

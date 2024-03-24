@@ -212,12 +212,21 @@ p {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 100vw;
 }
 @media only screen and (min-width: 768px) {
   .footer {
     padding: 1rem 2rem 2rem 2rem;
-    width: 100vw;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__mediabox {
+    width: 15rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -229,23 +238,13 @@ p {
     padding-bottom: 2rem;
   }
 }
-@media only screen and (min-width: 768px) and (min-width: 1280px) {
-  .footer__media {
-    padding-left: 7vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .footer__icon {
-    padding-left: 3rem;
-  }
-}
 .footer__icon1 {
   padding-right: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .footer__icon1 {
     height: 1.5rem;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     padding-top: 2.5rem;
   }
 }
@@ -255,14 +254,12 @@ p {
     align-self: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-left: -4rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .footer__site {
-    justify-content: flex-start;
-    width: 77vw;
-    margin-left: -6rem;
+    justify-content: start;
+    width: 80vw;
   }
 }
 .footer__container {
@@ -296,7 +293,6 @@ p {
 @media only screen and (min-width: 1280px) {
   .footer__copyright {
     width: 100vw;
-    margin-left: 6rem;
   }
 }
 
@@ -446,10 +442,10 @@ h4 {
 }
 @media only screen and (min-width: 768px) {
   .shows__header2 {
+    display: flex;
     width: 72vw;
     position: absolute;
     margin-top: 5rem;
-    display: flex;
     justify-content: flex-start;
   }
 }

@@ -143,10 +143,10 @@ h4{
     &__header2{
         display: none;
         @include breakpoint(tablet){
+            display: flex;
             width: 72vw;
             position: absolute;
             margin-top: 5rem;
-            display: flex;
             justify-content: flex-start;
             }
         @include breakpoint(desktop){

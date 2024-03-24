@@ -212,12 +212,21 @@ p {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 100vw;
 }
 @media only screen and (min-width: 768px) {
   .footer {
     padding: 1rem 2rem 2rem 2rem;
-    width: 100vw;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__mediabox {
+    width: 15rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -229,23 +238,13 @@ p {
     padding-bottom: 2rem;
   }
 }
-@media only screen and (min-width: 768px) and (min-width: 1280px) {
-  .footer__media {
-    padding-left: 7vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .footer__icon {
-    padding-left: 3rem;
-  }
-}
 .footer__icon1 {
   padding-right: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .footer__icon1 {
     height: 1.5rem;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     padding-top: 2.5rem;
   }
 }
@@ -255,14 +254,12 @@ p {
     align-self: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-left: -4rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .footer__site {
-    justify-content: flex-start;
-    width: 77vw;
-    margin-left: -6rem;
+    justify-content: start;
+    width: 80vw;
   }
 }
 .footer__container {
@@ -296,7 +293,6 @@ p {
 @media only screen and (min-width: 1280px) {
   .footer__copyright {
     width: 100vw;
-    margin-left: 6rem;
   }
 }
 
@@ -417,7 +413,7 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .article__article {
-    width: 76vw;
+    width: 68vw;
     font-weight: 600;
   }
 }
@@ -481,8 +477,8 @@ p {
 @media only screen and (min-width: 768px) {
   .gallery {
     display: flex;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -524,7 +520,7 @@ p {
 @media only screen and (min-width: 768px) {
   .gallery__picture {
     padding: 0.5rem 0.25rem;
-    width: 26vw;
+    width: 28vw;
     height: 13vw;
     flex-wrap: wrap;
   }
@@ -586,34 +582,28 @@ p {
   }
 }
 
+.form-comment {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 @media only screen and (min-width: 768px) {
   .form-comment {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .form-comment {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
 
 .form {
-  padding-left: 1rem;
-  padding-right: 1rem;
   position: relative;
-}
-@media only screen and (min-width: 1280px) {
-  .form {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 }
 .form__title {
   font-weight: 600;
-}
-@media only screen and (min-width: 1280px) {
-  .form__title {
-    width: 100vw;
-  }
 }
 .form__wrapper {
   display: flex;
@@ -621,17 +611,17 @@ p {
   width: 100%;
 }
 .form__left {
-  width: 4rem;
+  width: 3rem;
   padding-right: 1rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-bottom: 0.15rem solid #E1E1E1;
 }
 .form__right {
   display: flex;
   flex-direction: column;
   color: #fafafa;
-  width: 75vw;
+  width: 100vw;
   border-bottom: 0.15rem solid #E1E1E1;
 }
 @media only screen and (min-width: 768px) {
@@ -718,24 +708,17 @@ p {
 }
 
 .comment {
-  margin-left: 1rem;
-  margin-right: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 2rem;
   position: relative;
 }
-@media only screen and (min-width: 768px) {
-  .comment {
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-}
 .comment__container {
   display: flex;
   flex-direction: row;
   position: relative;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .comment__container {
@@ -743,10 +726,10 @@ p {
   }
 }
 .comment__left {
-  width: 4rem;
+  width: 3rem;
   padding-right: 1rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-start;
   border-bottom: 0.15rem solid #E1E1E1;
 }
 .comment__image {
@@ -778,7 +761,7 @@ p {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 75vw;
+  width: 100vw;
   border-bottom: 0.15rem solid #E1E1E1;
 }
 @media only screen and (min-width: 768px) {
@@ -788,7 +771,7 @@ p {
 }
 @media only screen and (min-width: 1280px) {
   .comment__right {
-    width: 36vw;
+    width: 35vw;
   }
 }
 .comment__name {
@@ -800,12 +783,12 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .comment__text {
-    width: 60vw;
+    width: 58vw;
   }
 }
 @media only screen and (min-width: 1280px) {
   .comment__text {
-    width: 36vw;
+    width: 34vw;
   }
 }
 .comment__box {

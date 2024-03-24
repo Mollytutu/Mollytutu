@@ -1,5 +1,5 @@
 @use "./typography";
-@use "./variable"as *;
+@use "./variable" as *;
 @use "./mixin" as *;
 
 body{
@@ -183,13 +183,23 @@ p {
     position: relative;
     padding-left: $space-between;
     padding-right: $space-between;
-    width:100vw;
 
     @include breakpoint(tablet){
         padding: 1rem 2rem 2rem 2rem;
-        width:100vw;
+    }
+    
+    @include breakpoint(desktop){
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    
+    &__mediabox{
+        @include breakpoint(tablet){
+        width:15rem;
+        }
     }
 
+    
     &__media {
         @include breakpoint(tablet){
             display: flex;
@@ -198,14 +208,7 @@ p {
             height: 4rem;
             padding-bottom: 2rem;
             @include breakpoint(desktop){
-            padding-left:7vw ;
             }
-        }
-    }
-
-    &__icon {
-        @include breakpoint(tablet){
-        padding-left: 3rem;
         }
     }
 
@@ -213,7 +216,7 @@ p {
         padding-right: $space-between;
         @include breakpoint(tablet){
             height: 1.5rem;
-            padding-right:1.5rem;
+            padding-right:2rem;
             padding-top: 2.5rem;
         }
     }
@@ -224,15 +227,12 @@ p {
             align-self: center;
             justify-content:space-around;
             flex-wrap: wrap;
-            margin-left: -4rem;
         }
         @include breakpoint(desktop){
-            justify-content: flex-start;
-            width:77vw;
-            margin-left: -6rem;
+            justify-content: start;
+            width:80vw;
         }
     }
-
     &__container {
         padding-bottom: 1rem;
 
@@ -261,7 +261,7 @@ p {
     &__copyright{
         @include breakpoint(desktop){
             width:100vw;
-            margin-left: 6rem;
+        
         }
 
     }
