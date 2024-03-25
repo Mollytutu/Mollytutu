@@ -6,13 +6,6 @@ const API_KEY = '<1a5aa7ad-7d9c-4102-8608-8b5b93bcd653>'
 const bandSiteApi = new BandSiteApi();
 const selectSection=document.querySelector(".comment");
 
-// export function timestampDateString(timestamp) {
-//     const dateTimestampt = new Date(timestamp);
-//     const year = dateTimestampt .getFullYear();
-//     const month = (dateTimestampt .getMonth() + 1).toString().padStart(2, '0');
-//     const dayTimestampt  = dateTimestampt .getDate().toString().padStart(2, '0');
-//     return `${month}/${dayTimestampt}/${year}`} ;
-
 async function renderComments(){
     try{
         const comments = await bandSiteApi.getComments();
@@ -57,8 +50,6 @@ async function renderComments(){
 };
 
 renderComments();
-
-// convert submitting post to top of the comments
 
 const formEl=document.querySelector(".form");
 
