@@ -43,7 +43,6 @@ export class BandSiteApi{
         }
     }
 }
-    
 
 export function timestampDateString(timestamp) {
     const dateTimestampt = new Date(timestamp);
