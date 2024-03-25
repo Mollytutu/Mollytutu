@@ -10,7 +10,6 @@
     background-size: cover;
     position: relative;
 
-
     &__darker {
         background-color:#323232;
         opacity:0.5;
@@ -48,7 +47,6 @@
             justify-self: center;
             padding-left: 6rem;
         }
-    
     }
 }
 
@@ -163,7 +161,6 @@
         }
     }
 
-
 .gallery {
     background-color: $sec-white;
     display: flex;
@@ -186,11 +183,11 @@
         margin:0;
         padding-top: $space-above;
         padding-bottom: $space-under;
+
         @include breakpoint(tablet){
             padding-top: 2rem;
             padding-bottom: 2rem;
             margin-left: 0.5rem;
-           
         }
         @include breakpoint(desktop){
         }
@@ -204,6 +201,7 @@
             align-items: center;
             padding-bottom: 2rem;
         }
+
         @include breakpoint(desktop){
            align-self: center;
             }
@@ -211,12 +209,14 @@
 
     &__picture {
         padding-bottom: $space-between;
+
         @include breakpoint(tablet){
             padding:0.5rem 0.25rem;
             width:28vw;
             height: 13vw;
             flex-wrap: wrap;
             }
+
             @include breakpoint(desktop){
                 width:25vw;
         } 
@@ -268,6 +268,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     }
+
     @include breakpoint(desktop){
         padding-left: 8rem;
         padding-right: 8rem;
@@ -304,6 +305,7 @@
         @include breakpoint(tablet){
             width:60vw;
         }
+
         @include breakpoint(desktop){
             width:36vw;
         }
@@ -362,6 +364,7 @@
             padding-left: 2rem;
             padding-right: 2rem;
         }
+
         @include breakpoint(desktop){
             width:10rem;
             }
@@ -438,6 +441,7 @@
         @include breakpoint(tablet){
             width:60vw;  
         }
+
         @include breakpoint(desktop){
             width:35vw;
         }
@@ -453,6 +457,7 @@
         @include breakpoint(tablet){
             width:58vw;
         }
+
         @include breakpoint(desktop){
             width:34vw;
         }
@@ -464,4 +469,3 @@
         margin-right: 2vw;
         }
     }
-
