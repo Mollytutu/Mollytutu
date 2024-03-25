@@ -1,5 +1,5 @@
 @use "./typography";
-@use "./variable"as *;
+@use "./variable" as *;
 @use "./mixin" as *;
 
 body{
@@ -10,8 +10,12 @@ body{
     max-width: 120rem;
 }
 
+img{
+    max-width: 100%;
+}
+
 .logo{
-    max-height: 1.25rem;
+    height: 1.5rem;
     max-width: 7.5rem;
 }
 
@@ -98,8 +102,11 @@ p {
     width: 100vw;
     &__container {
         @include breakpoint(tablet){
-        display: flex;
-        justify-content: flex-start;
+            display: flex;
+            justify-content: flex-start;
+        }
+        @include breakpoint(desktop){
+            padding-left: 5rem;
         }
     }
 
@@ -111,8 +118,8 @@ p {
         @include breakpoint(tablet){
             justify-content: flex-end;
             padding-bottom:1.5rem;
-            width:20vw;
-            margin-left: -1rem;
+            padding-right: 2rem;
+            width:10rem;
         }
     }
 
@@ -130,7 +137,7 @@ p {
         margin:0;
         @include breakpoint(tablet){
             padding-top:1rem;
-            padding-left: 3rem;
+            padding-left: 1rem;
             padding-bottom: 0;
             font-size: 0.875rem;
         }
@@ -147,7 +154,7 @@ p {
             text-decoration: underline 3px white;
             text-underline-offset: 1.7rem;
             align-self: center;
-            width: 10rem;
+            width: 6rem;
         }
     }
         
@@ -157,7 +164,7 @@ p {
         width:50vw;
        margin: auto;
        @include breakpoint(tablet){
-        width:6rem;
+       width:6rem;
        }
     }
 
@@ -175,29 +182,33 @@ p {
     flex-direction: column;
     position: relative;
     padding-left: $space-between;
+    padding-right: $space-between;
 
     @include breakpoint(tablet){
-        padding: 1rem 4em 2rem 4rem;
-        flex-direction: column;
+        padding: 1rem 2rem 2rem 2rem;
+    }
+    
+    @include breakpoint(desktop){
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    
+    &__mediabox{
+        @include breakpoint(tablet){
+        width:15rem;
+        }
     }
 
+    
     &__media {
         @include breakpoint(tablet){
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             height: 4rem;
-            width:100rem;
             padding-bottom: 2rem;
             @include breakpoint(desktop){
-            padding-left:7vw ;
             }
-        }
-    }
-
-    &__icon {
-        @include breakpoint(tablet){
-        padding-left: 3rem;
         }
     }
 
@@ -205,7 +216,7 @@ p {
         padding-right: $space-between;
         @include breakpoint(tablet){
             height: 1.5rem;
-            padding-right:1.5rem;
+            padding-right:2rem;
             padding-top: 2.5rem;
         }
     }
@@ -214,28 +225,24 @@ p {
         @include breakpoint(tablet){
             display: flex;
             align-self: center;
-            justify-content:space-between;
-            width:84vw;
+            justify-content:space-around;
             flex-wrap: wrap;
         }
         @include breakpoint(desktop){
-            justify-content: flex-start;
-            width:77vw;
+            justify-content: start;
+            width:80vw;
         }
     }
-
     &__container {
         padding-bottom: 1rem;
 
         @include breakpoint(tablet){
         display: flex;
         flex-direction:column;
-        justify-content: space-evenly;
-     
-            }
-
+        width:30vw;
+        }
         @include breakpoint(desktop){
-        padding-right: 4rem;
+        width:20vw;
         }
     }
 
@@ -243,7 +250,7 @@ p {
         @include breakpoint(tablet){
            position:absolute;
            left:78vw;
-           bottom: 19.5rem;
+           bottom: 20.5rem;
         }
         @include breakpoint(desktop){
             padding-left: 3rem;
@@ -251,10 +258,11 @@ p {
             }   
         }
 
-    &__copyRight {
-        @include breakpoint(tablet){
+    &__copyright{
+        @include breakpoint(desktop){
             width:100vw;
-            padding-right: 10rem;
+        
         }
+
     }
 }

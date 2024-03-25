@@ -1,90 +1,88 @@
-comments = [
-    {name:"Victor Pinto",
-     date:"11/02/2023",
-     comment:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",},
-    {name:"Christina Cabrera",
-     date:"10/28/2023",
-     comment:"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",},
+import {BandSiteApi, timestampDateString} from './band-site-api.js';
 
-     {name:"Isaac Tadesse",
-      date:"10/20/2023",
-      comment:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",},
-]
+const API_URL = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
+const API_KEY = '<1a5aa7ad-7d9c-4102-8608-8b5b93bcd653>'
 
-const pickS=document.querySelector(".comment");
+const bandSiteApi = new BandSiteApi();
+const selectSection=document.querySelector(".comment");
 
-const divEl=document.createElement('div');
-divEl.classList.add("comment__box");
-pickS.appendChild(divEl);
+// export function timestampDateString(timestamp) {
+//     const dateTimestampt = new Date(timestamp);
+//     const year = dateTimestampt .getFullYear();
+//     const month = (dateTimestampt .getMonth() + 1).toString().padStart(2, '0');
+//     const dayTimestampt  = dateTimestampt .getDate().toString().padStart(2, '0');
+//     return `${month}/${dayTimestampt}/${year}`} ;
 
-const hrAbove=document.createElement("hr");
-hrAbove.classList.add('comment__hr');
-divEl.appendChild(hrAbove);
+async function renderComments(){
+    try{
+        const comments = await bandSiteApi.getComments();
+        selectSection.innerHTML='';
 
-function renderComments(){
-comments.forEach((e) => {
+        comments.forEach((e) => {
+        const divEl10=document.createElement('div');
+        divEl10.classList.add("comment__container");
+        selectSection.appendChild(divEl10);
 
-const divEl0=document.createElement('div');
-divEl0.classList.add("comment__container");
-pickS.appendChild(divEl0);
+        const divEl01=document.createElement('div');
+        divEl01.classList.add("comment__left");
+        divEl10.appendChild(divEl01)
 
-const imgEl=document.createElement("img");
-imgEl.classList.add("comment__image");
-imgEl.setAttribute('src', 'https://via.placeholder.com/48x48/E1E1E1/E1E1E1')
-divEl0.appendChild(imgEl);
+        const imgEl=document.createElement("img");
+        imgEl.classList.add("comment__image");
+        imgEl.setAttribute('src', 'https://via.placeholder.com/48x48/E1E1E1/E1E1E1')
+        divEl01.appendChild(imgEl);
 
-const divEl1=document.createElement('div');
-divEl1.classList.add("comment__wrapper");
-pickS.appendChild(divEl1);
+        const divEl02=document.createElement('div');
+        divEl02.classList.add("comment__right");
+        divEl10.appendChild(divEl02);
 
-const nameEl=document.createElement('h3');
-nameEl.classList.add("comment__name");
-nameEl.innerHTML=(e).name,
-divEl1.appendChild(nameEl);
+        const nameEl=document.createElement('h3');
+        nameEl.classList.add("comment__name");
+        nameEl.innerHTML=(e).name,
+        divEl02.appendChild(nameEl);
 
-const timeEl=document.createElement('h3');
-timeEl.classList.add("comment__time");
-// const timeValue=(e).date;
-// timeEl.setAttribute('datetime',timeValue);
-timeEl.innerHTML=(e).date;
-divEl1.appendChild(timeEl);
+        const timeEl=document.createElement('h3');
+        timeEl.classList.add("comment__time");
+        timeEl.innerHTML=timestampDateString(e.timestamp);
+        divEl02.appendChild(timeEl);
 
-const textEl=document.createElement('p');
-textEl.classList.add("comment__text");
-textEl.innerHTML=(e).comment;
-divEl1.appendChild(textEl);
-
-const divEl3=document.createElement('div');
-divEl3.classList.add("comment__box");
-divEl1.appendChild(divEl3);
-
-const hrUnder=document.createElement("hr");
-hrUnder.classList.add('comment__hr1');
-pickS.appendChild(hrUnder);
-
-})
-}
+        const textEl=document.createElement('p');
+        textEl.classList.add("comment__text");
+        textEl.innerHTML=(e).comment;
+        divEl02.appendChild(textEl);
+    });
+    } catch (error){
+        console.error("Error fatching comments",error)
+    }
+};
 
 renderComments();
 
-const insertHere=document.querySelector(".divEl");
+// convert submitting post to top of the comments
 
-insertHere.addEventListener('submit', (event) => {
+const formEl=document.querySelector(".form");
+
+formEl.addEventListener('submit', async(event) => {
     event.preventDefault();
 
-const nameVal = event.target.name.value;
-const dateVal = new Date();
-const commentVal = event.target.comment.value;
+    const nameVal = event.target.name.value;
+    const commentVal = event.target.comment.value;
 
-const newEntry = {
-    name: nameVal,
-    date: dateVal,
-    text: commentVal,
-  };
-  
-  comments.push(newEntry);
+    const newEntry = {
+        name: nameVal,
+        comment: commentVal,
+    };
 
-  renderComments();
-
-  event.target.reset();
+    try{ 
+        await bandSiteApi.postComment(newEntry);
+        await renderComments();
+        event.target.reset();
+    }catch(error){
+        console.error('Error posting comment:', error);
+    }
 });
+
+
+
+
+
