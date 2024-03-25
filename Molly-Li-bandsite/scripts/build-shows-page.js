@@ -1,5 +1,4 @@
 import { BandSiteApi, timestampDateString } from './band-site-api.js';
-// import  {timestampDateString} from './index-page.js';
 
 const API_URL = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
 const API_KEY = '1a5aa7ad-7d9c-4102-8608-8b5b93bcd653';
@@ -13,14 +12,14 @@ async function renderShows() {
         selectDetails.innerHTML = '';
 
         const divE0=document.createElement('div');
-    divE0.classList.add('shows__header1');
-    selectSection.appendChild(divE0);
-
-    const showTitleE=document.createElement('h2');
-    showTitleE.classList.add('shows__header');
-    showTitleE.innerHTML='Shows';
-    divE0.appendChild(showTitleE);
-        
+        divE0.classList.add('shows__header1');
+        selectSection.appendChild(divE0);
+    
+        const showTitleE=document.createElement('h2');
+        showTitleE.classList.add('shows__header');
+        showTitleE.innerHTML='Shows';
+        divE0.appendChild(showTitleE);
+            
         const showSchedules = await bandSiteApi.getShows();
 
         showSchedules.forEach((eachShow)=> {
