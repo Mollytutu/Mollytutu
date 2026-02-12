@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @Mollytutu
 - 👀 I’m interested in: listening to audio books, financial investment, reading psychology books, and solving puzzles.
-- 🌱 I’m currently learned: LLM (Large Language Models), Deep Learning, machine learning, A/B Test, Bayesian, SQL, Python and R.
+- 💼 I’m currently working in data engineering and on my first AI engineering project.
+- 🌱 I’m currently learned: Certified AI Enginner, Data Engineer, Master of Data Scentist,RAG,LLMOps,MCP, Deep Learning, machine learning, Bayesian, SQL, Python.
   
 - 💞️ I’m looking to collaborate on projects related to data analysis, machine learning, and data science. Open to working on innovative solutions and learning alongside others.
 - 📫 How to reach me You can reach me via email at li.molly@hotmail.com or connect with me on GitHub @Mollytutu.
