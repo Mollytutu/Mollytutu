@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Mollytutu
+- 👋 Hi, I’m Molly
 - 👀 I’m interested in: listening to audio books, financial investment, reading psychology books, and solving puzzles.
 - 💼 I’m currently working in data engineering and on my AI engineering projects.
 - 🌱 I have learned Certified AI Engineering, Data Engineering, Master’s-level Data Science, RAG, LLMOps, MCP, Deep Learning, Machine Learning, Bayesian methods, SQL, and Python.
