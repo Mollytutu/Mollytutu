@@ -7,7 +7,12 @@
   
 - ⚡ Fun fact: I did over 300KM of hiking in Spain on my last birthday ( amazing experience)
     because ten years ago, while trekking in Nepal, I decided my next hike should be flat.
-
+  
+**********************
+- In March, I built a data scraping and RAG project using the OpenAI API with a Streamlit user interface.
+- In May I built a full-stack Python project with FastAPI and deployed it on Linux using Linode.
+- As of June 2026, I am focused on building a full-stack, multi-agent AI framework using FastAPI, AWS, and CI/CD. This project is an AI Job Readiness application designed to help me prepare for AI Engineer interviews.
+**********************
 <!---
 Mollytutu/Mollytutu is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
